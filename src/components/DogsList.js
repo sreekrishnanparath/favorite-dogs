@@ -82,6 +82,11 @@ function DogsPanel() {
           spacing={{ xs: 1, md: 3, xl: 3 }}
           columns={{ xs: 1, sm: 8, md: 12 }}
         >
+          {dogs.length == 0 && 
+            <Typography variant='h6' sx={{ padding: 2 }}>
+              No Pics Found!
+            </Typography>
+          }
           {dogs.map((item) => (
             <Grid item xs={2} sm={4} md={4} key={item.url}>
               <Card>

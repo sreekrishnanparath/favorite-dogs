@@ -56,6 +56,11 @@ function FavPanel() {
           spacing={{ xs: 1, md: 3, xl: 3 }}
           columns={{ xs: 1, sm: 8, md: 12 }}
         >
+          {favs.length == 0 && 
+            <Typography variant='h6' sx={{ padding: 2 }}>
+              No Favorites Found!
+            </Typography>
+          }
           {favs.map((item) => (
             <Grid item xs={2} sm={4} md={4} key={item}>
               <Card>
@@ -84,6 +89,7 @@ function FavPanel() {
               </Card>
             </Grid>
           ))}
+
         </Grid>
       </Box>
     </div>
